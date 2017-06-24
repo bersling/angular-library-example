@@ -110,13 +110,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "libex",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "libex",
       "kebab-case"
     ],
     "use-input-property-decorator": true,
