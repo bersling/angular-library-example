@@ -11,7 +11,7 @@ import { LibexModule } from './libex/libex.module';
   ],
   imports: [
     BrowserModule,
-    LibexModule
+    LibexModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

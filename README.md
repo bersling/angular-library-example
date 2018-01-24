@@ -1,34 +1,25 @@
-# LibexProject
+# Angular Library Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+This repo consists of two parts:
 
-## Development server
+- demo-library: Demonstrates how to write an Angular library
+- exmample-consumer: A small demo of how to use the library
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It is also important to understand how the demo-library is setup itself.
+It's basically a regular Angular application:
 
-## Code scaffolding
+```
+src/app
+  libex (libex is the module name)
+  ...
+  app.component.ts
+  app.module.ts
+build.js
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Only what's inside of libex will get published to npm. That makes `app.module.ts` just a **playground** for you to test out your library. It's ideal to develop against, as all the components from your library are imported directly and you can work with hot reload and don't have to publish to npm (or run npm link) each time you want to implement or test a feature.
 
-## Build
+The only difference between the app.module.ts in `example-consumer/src/app` and `demo-library/src/app` is that the example-consumer actually gets the published library from npm. This just serves the purpose for everyone reading the tutorial to see how exactly to use the published library
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## The actual library
-
-Find the library under `/src/app/libex`. There is a module called `LibexModule`,
-with the main file being the `index.ts`.
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## How are things published?
+All the library-building and -publishing logic is in `demo-library/build.js`. It's a lot less complex than in other library-generators, since it just publishes TypeScript source files. However, this requires an extra step on the side of the consumer, which is to add `node_modules/libex/index.ts` as sources to the tsconfig.json. You can run the script with `node build.js` from the demo-library folder. Or just with `npm run build:lib` since there's an alias.

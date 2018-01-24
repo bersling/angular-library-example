@@ -6,7 +6,7 @@ export class HelloService {
   constructor() { }
 
   sayHello() {
-    console.log('hello!');
+    alert('hello!');
   }
 
 }
