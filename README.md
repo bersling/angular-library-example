@@ -3,7 +3,7 @@
 This repo consists of two parts:
 
 - demo-library: Demonstrates how to write an Angular library
-- exmample-consumer: A small demo of how to use the library
+- example-consumer: A small demo of how to use the library
 
 It is also important to understand how the demo-library is setup itself.
 It's basically a regular Angular application:
