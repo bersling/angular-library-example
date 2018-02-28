@@ -15,6 +15,10 @@
   ],
   "include": [
     "**/*.spec.ts",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "../node_modules/libex/**/*.ts"    
+  ],
+  "exclude": [
+    "../node_modules/libex/**/*spec.ts"
   ]
 }
