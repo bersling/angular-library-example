@@ -18,6 +18,6 @@
   },
   "include": [
     "./src/**/*",
-    "./node_modules/libex/index.ts"
+    "./node_modules/libex/**/*.ts"
   ]
 }
