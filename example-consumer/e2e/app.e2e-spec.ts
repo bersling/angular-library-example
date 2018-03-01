@@ -1,14 +1,20 @@
-import { AppPage } from './app.po';
+import {browser} from 'protractor';
+import {LibexProjectPage} from './app.po';
 
-describe('libex-consumer App', () => {
-  let page: AppPage;
+describe('libex-project App', () => {
+  let page: LibexProjectPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new LibexProjectPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    page.getHelloButton().click();
+    const alertDialog = browser.switchTo().alert();
+    expect(alertDialog.getText()).toEqual("hello!");
+    expect(alertDialog.accept).toBeDefined();
+    alertDialog.accept();
+    browser.sleep(200);
   });
 });
