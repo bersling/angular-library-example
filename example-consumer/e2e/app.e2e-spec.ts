@@ -12,7 +12,7 @@ describe('libex-project App', () => {
     page.navigateTo();
     page.getHelloButton().click();
     const alertDialog = browser.switchTo().alert();
-    expect(alertDialog.getText()).toEqual("hello!");
+    expect(alertDialog.getText()).toEqual('hello!');
     expect(alertDialog.accept).toBeDefined();
     alertDialog.accept();
     browser.sleep(200);

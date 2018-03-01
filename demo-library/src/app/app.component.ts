@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {HelloService} from './libex';
 
 @Component({
-  selector: 'app-root',
+  selector: 'libex-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
