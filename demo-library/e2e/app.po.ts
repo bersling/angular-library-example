@@ -5,7 +5,7 @@ export class LibexProjectPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getHelloButton() {
+    return element(by.id('hello-button'));
   }
 }
