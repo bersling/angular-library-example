@@ -1,4 +1,6 @@
+@import '../variables';
+
 :host {
   display: block;
-  background: red;
+  background: $hello-background;
 }
