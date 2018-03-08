@@ -2,5 +2,5 @@
 
 :host {
   display: block;
-  background: map-get($theme, hello-background);
+  @include hello-button();
 }

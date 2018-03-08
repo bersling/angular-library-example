@@ -1,8 +1,10 @@
+@mixin hello-button($theme) {
+  $hello-background: map-get($theme, 'hello-background');
+  background: $hello-background;
+}
 
-$theme: (
-        'hello-background': yellow
-);
 
 @mixin apply-theme($theme) {
-  $theme: $theme !global;
+  @include hello-button($theme);
 }
+
