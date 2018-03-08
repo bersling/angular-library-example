@@ -1,0 +1,8 @@
+
+$theme: (
+        'hello-background': yellow
+);
+
+@mixin apply-theme($theme) {
+  $theme: $theme !global;
+}

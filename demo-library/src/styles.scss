@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-$hello-background: red;
+@import 'app/libex/theming';
 
-@import 'app/libex/variables';
+$theme: (
+  'hello-background': red
+);
+
+@include apply-theme($theme);
+

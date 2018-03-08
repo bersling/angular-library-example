@@ -1,6 +1,6 @@
-@import '../variables';
+@import '../theming';
 
 :host {
   display: block;
-  background: $hello-background;
+  background: map-get($theme, hello-background);
 }
