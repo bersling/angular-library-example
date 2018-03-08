@@ -1,6 +1,0 @@
-@import '../theming';
-
-:host {
-  display: block;
-  @include hello-button();
-}

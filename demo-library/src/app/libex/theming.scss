@@ -1,6 +1,8 @@
 @mixin hello-button($theme) {
   $hello-background: map-get($theme, 'hello-background');
-  background: $hello-background;
+  .hello {
+    background: $hello-background;
+  }
 }
 
 
