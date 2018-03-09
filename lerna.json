@@ -1,0 +1,8 @@
+{
+  "lerna": "2.9.0",
+  "packages": [
+    "demo-library/src/app/libex",
+    "example-consumer"
+  ],
+  "version": "0.0.0"
+}
