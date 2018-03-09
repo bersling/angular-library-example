@@ -1,12 +1,12 @@
-@mixin hello-button($theme) {
+@mixin hello($theme) {
   $hello-background: map-get($theme, 'hello-background');
-  .hello {
+  .libex-hello {
     background: $hello-background;
   }
 }
 
 
 @mixin apply-theme($theme) {
-  @include hello-button($theme);
+  @include hello($theme);
 }
 
