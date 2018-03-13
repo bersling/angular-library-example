@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {HelloService} from '../../../libex';
+import {HelloService} from 'libex';
 
 @Component({
   selector: 'app-root',
