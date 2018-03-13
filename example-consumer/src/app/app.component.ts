@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {HelloService} from 'libex';
+import {Component} from '@angular/core';
+import {HelloService} from '../../../libex';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,8 @@ import {HelloService} from 'libex';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private helloService: HelloService) {}
+  constructor(private helloService: HelloService) {
+  }
 
   sayHello() {
     this.helloService.sayHello();

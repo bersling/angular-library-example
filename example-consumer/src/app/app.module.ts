@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { LibexModule } from 'libex';
+import {AppComponent} from './app.component'
+import {LibexModule} from '../../../libex/libex.module';
 
 @NgModule({
   declarations: [
@@ -15,4 +15,5 @@ import { LibexModule } from 'libex';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
